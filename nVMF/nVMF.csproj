@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67A3542A-DA97-4694-AC4D-A4D5C84E619E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nVMF</RootNamespace>
+    <AssemblyName>nVMF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CSGO\CsgoCollectiblePrefab.cs" />
+    <Compile Include="Classes\CSGO\CsgoInventoryImageData.cs" />
+    <Compile Include="Classes\CSGO\CsgoInventorySpotlight.cs" />
+    <Compile Include="Classes\CSGO\CsgoModelBounds.cs" />
+    <Compile Include="Classes\CSGO\CsgoPrefab.cs" />
+    <Compile Include="Classes\CSGO\CsgoSoundData.cs" />
+    <Compile Include="Classes\CSGO\CsgoInventoryItemPrefab.cs" />
+    <Compile Include="Classes\CSGO\CsgoWeaponPrefab.cs" />
+    <Compile Include="Classes\Interfaces.cs" />
+    <Compile Include="Classes\Enums.cs" />
+    <Compile Include="Parser\Syntax\SyntaxParser.cs" />
+    <Compile Include="Parser\Syntax\VMF\Nodes\CompoundNode.cs" />
+    <Compile Include="Classes\CSGO\CsgoWeapon.cs" />
+    <Compile Include="Extensions\CompoundExtensions.cs" />
+    <Compile Include="Extensions\CsgoExtensions.cs" />
+    <Compile Include="Parser\Interfaces.cs" />
+    <Compile Include="Parser\Syntax\VMF\Nodes\DeclarationNode.cs" />
+    <Compile Include="Parser\Lexer.cs" />
+    <Compile Include="Parser\Lexer.Tokenize.cs" />
+    <Compile Include="Parser\Syntax\VMF\Nodes\DeclarationNodeList.cs" />
+    <Compile Include="Parser\Syntax\VPath\VPathSyntaxParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Parser\Syntax\VMF\Nodes\PropertyNode.cs" />
+    <Compile Include="Parser\Syntax\SyntaxNode.cs" />
+    <Compile Include="Parser\Syntax\VMF\VmfSyntaxParser.cs" />
+    <Compile Include="Parser\Syntax\VMF\VmfSyntaxParser.Declaration.cs" />
+    <Compile Include="Parser\Utilities\Token.cs" />
+    <Compile Include="Parser\Utilities\TokenKind.cs" />
+    <Compile Include="Parser\Utilities\TokenLocation.cs" />
+    <Compile Include="Script.cs" />
+    <Compile Include="Utilities\CsgoUtilities.cs" />
+    <Compile Include="Utilities\PrefabUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Parser\Syntax\VPath\Nodes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
