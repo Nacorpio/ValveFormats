@@ -1,5 +1,5 @@
 ﻿using System;
-using Narser.Two.Parser.Syntax.VMF.Nodes;
+using nVMF;
 
 namespace Narser.Two.Debug
 {

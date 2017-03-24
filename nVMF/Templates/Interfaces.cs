@@ -1,6 +1,6 @@
-using Narser.Two.Classes.CSGO;
+using nVMF.Templates.CSGO;
 
-namespace Narser.Two.Classes
+namespace nVMF.Templates
 {
     public interface IInventoryItem
     {

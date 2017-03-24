@@ -1,6 +1,6 @@
-﻿using Narser.Two.Parser.Utilities;
+﻿using nVMF.Parser.Utilities;
 
-namespace Narser.Two.Parser.Syntax.VMF
+namespace nVMF.Parser.Syntax.VMF
 {
     public sealed partial class VmfSyntaxParser : SyntaxParser
     {

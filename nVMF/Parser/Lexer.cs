@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using Narser.Two.Parser.Utilities;
+using nVMF.Parser.Utilities;
 
-namespace Narser.Two.Parser
+namespace nVMF.Parser
 {
     public delegate void LexerEventHandler(Lexer sender, EventArgs eventArgs);
 

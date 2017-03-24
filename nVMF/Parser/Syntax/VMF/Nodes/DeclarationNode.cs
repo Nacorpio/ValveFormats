@@ -1,4 +1,4 @@
-namespace Narser.Two.Parser.Syntax.VMF.Nodes
+namespace nVMF.Parser.Syntax.VMF.Nodes
 {
     public abstract class DeclarationNode : SyntaxNode, ISource
     {

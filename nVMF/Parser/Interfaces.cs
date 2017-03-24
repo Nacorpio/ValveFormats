@@ -1,4 +1,4 @@
-﻿namespace Narser.Two.Parser
+﻿namespace nVMF.Parser
 {
     public interface ISource
     {

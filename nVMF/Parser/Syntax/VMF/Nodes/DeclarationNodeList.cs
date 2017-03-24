@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Narser.Two.Parser.Syntax.VMF.Nodes
+namespace nVMF.Parser.Syntax.VMF.Nodes
 {
     public sealed class DeclarationNodeList : List<DeclarationNode>
     {

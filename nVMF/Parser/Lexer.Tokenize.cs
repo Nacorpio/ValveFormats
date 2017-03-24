@@ -1,7 +1,7 @@
 ﻿using System.Text;
-using Narser.Two.Parser.Utilities;
+using nVMF.Parser.Utilities;
 
-namespace Narser.Two.Parser
+namespace nVMF.Parser
 {
     public partial class Lexer
     {

@@ -41,19 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\CSGO\CsgoCollectiblePrefab.cs" />
-    <Compile Include="Classes\CSGO\CsgoInventoryImageData.cs" />
-    <Compile Include="Classes\CSGO\CsgoInventorySpotlight.cs" />
-    <Compile Include="Classes\CSGO\CsgoModelBounds.cs" />
-    <Compile Include="Classes\CSGO\CsgoPrefab.cs" />
-    <Compile Include="Classes\CSGO\CsgoSoundData.cs" />
-    <Compile Include="Classes\CSGO\CsgoInventoryItemPrefab.cs" />
-    <Compile Include="Classes\CSGO\CsgoWeaponPrefab.cs" />
-    <Compile Include="Classes\Interfaces.cs" />
-    <Compile Include="Classes\Enums.cs" />
+    <Compile Include="Templates\CSGO\CsgoCollectiblePrefab.cs" />
+    <Compile Include="Templates\CSGO\CsgoInventoryImageData.cs" />
+    <Compile Include="Templates\CSGO\CsgoInventorySpotlight.cs" />
+    <Compile Include="Templates\CSGO\CsgoModelBounds.cs" />
+    <Compile Include="Templates\CSGO\CsgoPrefab.cs" />
+    <Compile Include="Templates\CSGO\CsgoSoundData.cs" />
+    <Compile Include="Templates\CSGO\CsgoInventoryItemPrefab.cs" />
+    <Compile Include="Templates\CSGO\CsgoWeaponPrefab.cs" />
+    <Compile Include="Templates\Interfaces.cs" />
+    <Compile Include="Templates\Enums.cs" />
     <Compile Include="Parser\Syntax\SyntaxParser.cs" />
     <Compile Include="Parser\Syntax\VMF\Nodes\CompoundNode.cs" />
-    <Compile Include="Classes\CSGO\CsgoWeapon.cs" />
+    <Compile Include="Templates\CSGO\CsgoWeapon.cs" />
     <Compile Include="Extensions\CompoundExtensions.cs" />
     <Compile Include="Extensions\CsgoExtensions.cs" />
     <Compile Include="Parser\Interfaces.cs" />

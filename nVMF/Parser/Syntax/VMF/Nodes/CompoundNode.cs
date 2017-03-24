@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Narser.Two.Parser.Syntax.VMF.Nodes
+namespace nVMF.Parser.Syntax.VMF.Nodes
 {
     public class CompoundNode : DeclarationNode
     {

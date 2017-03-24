@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Narser.Two.Classes.CSGO;
-using Narser.Two.Parser.Syntax.VMF.Nodes;
+using nVMF.Parser.Syntax.VMF.Nodes;
+using nVMF.Templates.CSGO;
 
-namespace Narser.Two.Utilities
+namespace nVMF.Utilities
 {
     public static class PrefabUtilities
     {

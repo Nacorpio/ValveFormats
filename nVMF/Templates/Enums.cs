@@ -1,4 +1,4 @@
-namespace Narser.Two.Classes
+namespace nVMF.Templates
 {
     public enum CsgoTeam
     {

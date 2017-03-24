@@ -1,4 +1,4 @@
-﻿namespace Narser.Two.Parser.Utilities
+﻿namespace nVMF.Parser.Utilities
 {
     public enum TokenKind
     {

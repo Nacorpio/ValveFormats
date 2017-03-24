@@ -1,11 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Narser.Two.Parser.Syntax;
-using Narser.Two.Parser.Syntax.VMF.Nodes;
-using VmfSyntaxParser = Narser.Two.Parser.Syntax.VMF.VmfSyntaxParser;
+using nVMF.Parser.Syntax.VMF.Nodes;
+using VmfSyntaxParser = nVMF.Parser.Syntax.VMF.VmfSyntaxParser;
 
-namespace Narser.Two
+namespace nVMF
 {
     public sealed class Script
     {

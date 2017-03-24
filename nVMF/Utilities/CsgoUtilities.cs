@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using Narser.Two.Classes;
+using nVMF.Templates;
 
-namespace Narser.Two.Utilities
+namespace nVMF.Utilities
 {
     internal static class CsgoUtilities
     {

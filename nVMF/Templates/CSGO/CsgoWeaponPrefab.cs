@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using Narser.Two.Extensions;
-using Narser.Two.Parser.Syntax.VMF.Nodes;
+using nVMF.Extensions;
+using nVMF.Parser.Syntax.VMF.Nodes;
 
-namespace Narser.Two.Classes.CSGO
+namespace nVMF.Templates.CSGO
 {
     public class CsgoWeaponPrefab : CsgoInventoryItemPrefab, IGameObject
     {

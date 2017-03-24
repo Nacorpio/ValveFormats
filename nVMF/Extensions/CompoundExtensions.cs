@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Narser.Two.Parser.Syntax.VMF.Nodes;
+using nVMF.Parser.Syntax.VMF.Nodes;
 
-namespace Narser.Two.Extensions
+namespace nVMF.Extensions
 {
     public static class CompoundExtensions
     {

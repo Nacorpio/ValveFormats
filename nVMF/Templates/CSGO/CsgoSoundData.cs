@@ -1,6 +1,6 @@
-using Narser.Two.Parser.Syntax.VMF.Nodes;
+using nVMF.Parser.Syntax.VMF.Nodes;
 
-namespace Narser.Two.Classes.CSGO
+namespace nVMF.Templates.CSGO
 {
     public sealed class CsgoSoundData
     {

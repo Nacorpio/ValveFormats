@@ -1,7 +1,7 @@
-using Narser.Two.Parser.Syntax.VMF.Nodes;
-using Narser.Two.Utilities;
+using nVMF.Parser.Syntax.VMF.Nodes;
+using nVMF.Utilities;
 
-namespace Narser.Two.Classes.CSGO
+namespace nVMF.Templates.CSGO
 {
     public sealed class CsgoInventorySpotLight
     {

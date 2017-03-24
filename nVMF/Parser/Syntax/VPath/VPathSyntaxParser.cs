@@ -1,4 +1,4 @@
-﻿namespace Narser.Two.Parser.Syntax.VPath
+﻿namespace nVMF.Parser.Syntax.VPath
 {
     public class VPathSyntaxParser
     {

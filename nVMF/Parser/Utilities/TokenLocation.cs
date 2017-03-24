@@ -1,4 +1,4 @@
-﻿namespace Narser.Two.Parser.Utilities
+﻿namespace nVMF.Parser.Utilities
 {
     /// <summary>
     /// Represents the location of a <see cref="Token"/> object.

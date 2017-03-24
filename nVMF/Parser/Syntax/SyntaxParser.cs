@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Narser.Two.Parser.Utilities;
+using nVMF.Parser.Utilities;
 
-namespace Narser.Two.Parser.Syntax
+namespace nVMF.Parser.Syntax
 {
     public delegate void SyntaxParserAdvancedEvent(SyntaxParser sender, TokenKind kind, ref SyntaxNode node);
 
