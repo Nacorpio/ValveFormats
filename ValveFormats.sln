@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nVMF", "nVMF\nVMF.csproj", "{67A3542A-DA97-4694-AC4D-A4D5C84E619E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValveFormats", "ValveFormats\ValveFormats.csproj", "{67A3542A-DA97-4694-AC4D-A4D5C84E619E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nVMF.Debug", "nVMF.Debug\nVMF.Debug.csproj", "{FC683E34-B86C-4F38-883F-0F1216F963B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValveFormats.Debug", "ValveFormats.Debug\ValveFormats.Debug.csproj", "{FC683E34-B86C-4F38-883F-0F1216F963B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

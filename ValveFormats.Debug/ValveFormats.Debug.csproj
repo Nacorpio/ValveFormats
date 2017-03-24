@@ -51,7 +51,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\nVMF\nVMF.csproj">
+    <ProjectReference Include="..\ValveFormats\ValveFormats.csproj">
       <Project>{67a3542a-da97-4694-ac4d-a4d5c84e619e}</Project>
       <Name>nVMF</Name>
     </ProjectReference>

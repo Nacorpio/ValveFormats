@@ -1,6 +1,6 @@
 ﻿namespace nVMF.Parser.Syntax.VPath
 {
-    public class VPathSyntaxParser
+    public sealed partial class VPathSyntaxParser
     {
     }
 }

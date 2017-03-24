@@ -27,7 +27,7 @@ namespace nVMF.Templates.CSGO
                     return null;
                 }
 
-                var results = new List<CsgoTeam>();
+                var results = new HashSet<CsgoTeam>();
 
                 if (UsedByClasses.TryGetValue("terrorists", out bool x) && x)
                 {

@@ -7,8 +7,8 @@
     <ProjectGuid>{67A3542A-DA97-4694-AC4D-A4D5C84E619E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>nVMF</RootNamespace>
-    <AssemblyName>nVMF</AssemblyName>
+    <RootNamespace>ValveFormats</RootNamespace>
+    <AssemblyName>ValveFormats</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Parser\Syntax\VPath\VPathSyntaxParser.Declaration.cs" />
     <Compile Include="Templates\CSGO\CsgoCollectiblePrefab.cs" />
     <Compile Include="Templates\CSGO\CsgoInventoryImageData.cs" />
     <Compile Include="Templates\CSGO\CsgoInventorySpotlight.cs" />
