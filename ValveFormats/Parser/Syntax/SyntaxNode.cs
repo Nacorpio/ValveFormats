@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using nVMF.Parser.Utilities;
+using ValveFormats.Parser.Utilities;
 
-namespace nVMF.Parser.Syntax
+namespace ValveFormats.Parser.Syntax
 {
     public abstract class SyntaxNode
     {
@@ -30,12 +30,12 @@ namespace nVMF.Parser.Syntax
         /// <summary>
         /// Gets the start location of the <see cref="SyntaxNode"/>.
         /// </summary>
-        internal TokenLocation Start => Tokens.First().Location;
+        internal TokenLocation Start => Tokens.First().Start;
 
         /// <summary>
         /// Gets the end location of the <see cref="SyntaxNode"/>.
         /// </summary>
-        internal TokenLocation End => Tokens.Last().Location;
+        internal TokenLocation End => Tokens.Last().End;
 
         /// <summary>
         /// Gets the length of the <see cref="SyntaxNode"/>.
@@ -61,13 +61,17 @@ namespace nVMF.Parser.Syntax
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != GetType()) return false;
-            return Equals((SyntaxNode)obj);
+
+            return obj.GetType() == GetType() && Equals((SyntaxNode)obj);
         }
 
+        /// <summary>
+        /// Returns the hash code of the <see cref="SyntaxNode"/>.
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
-            return Tokens?.GetHashCode() ?? 0;
+            return Start.Position ^ End.Position;
         }
     }
 }

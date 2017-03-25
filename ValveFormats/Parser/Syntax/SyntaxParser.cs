@@ -1,38 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using nVMF.Parser.Utilities;
+using ValveFormats.Parser.Utilities;
 
-namespace nVMF.Parser.Syntax
+namespace ValveFormats.Parser.Syntax
 {
     public delegate void SyntaxParserAdvancedEvent(SyntaxParser sender, TokenKind kind, ref SyntaxNode node);
 
     public abstract class SyntaxParser : IDisposable
     {
-        public event SyntaxParserAdvancedEvent Advanced; 
+        public event SyntaxParserAdvancedEvent Advanced;
 
-        private readonly Lexer _lexer;
+        private readonly string _input;
         private readonly List<SyntaxNode> _nodes;
 
         private List<Token> _tokens;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SyntaxParser"/> class.
-        /// </summary>
-        /// <param name="lexer">The lexer.</param>
-        protected SyntaxParser(Lexer lexer)
-        {
-            _lexer = lexer;
-            _nodes = new List<SyntaxNode>();
-        }
-
+        
         /// <summary>
         /// Initializes a new instance of teh <see cref="SyntaxParser"/> class.
         /// </summary>
         /// <param name="input">The string input.</param>
-        protected SyntaxParser(string input) 
-            : this(new Lexer(input))
+        protected SyntaxParser(string input)
         {
+            _input = input;
+            _nodes = new List<SyntaxNode>();
         }
 
         /// <summary>
@@ -69,7 +60,7 @@ namespace nVMF.Parser.Syntax
         public Token Peek(int n = 1)
         {
             var x = Position + n;
-            return x > _tokens.Count - 1 ? new Token(null, default(TokenLocation), TokenKind.None) : _tokens[x];
+            return x > _tokens.Count - 1 ? new Token(null, default(TokenLocation), default(TokenLocation), TokenKind.None) : _tokens[x];
         }
 
         /// <summary>
@@ -77,13 +68,11 @@ namespace nVMF.Parser.Syntax
         /// </summary>
         public void Build()
         {
-            if (_lexer == null)
+            using (var lexer = new Lexer(_input))
             {
-                throw new ArgumentNullException(nameof(_lexer));
+                lexer.TokenizeAll();
+                _tokens = new List<Token>(lexer.Tokens);
             }
-
-            _lexer.TokenizeAll();
-            _tokens = new List<Token>(_lexer.Tokens);
 
             SyntaxNode node = null;
             while (Position != _tokens.Count - 1)
@@ -133,8 +122,6 @@ namespace nVMF.Parser.Syntax
         {
             _nodes.Clear();
             _tokens.Clear();
-
-            _lexer.Dispose();
         }
     }
 }

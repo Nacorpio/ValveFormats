@@ -1,7 +1,7 @@
-using nVMF.Parser.Syntax.VMF.Nodes;
-using nVMF.Utilities;
+using ValveFormats.Parser.Syntax.VMF.Nodes;
+using ValveFormats.Utilities;
 
-namespace nVMF.Templates.CSGO
+namespace ValveFormats.Templates.CSGO
 {
     public sealed class CsgoInventorySpotLight
     {

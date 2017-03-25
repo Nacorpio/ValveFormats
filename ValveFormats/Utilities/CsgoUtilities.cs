@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using nVMF.Templates;
+using ValveFormats.Templates;
 
-namespace nVMF.Utilities
+namespace ValveFormats.Utilities
 {
     internal static class CsgoUtilities
     {

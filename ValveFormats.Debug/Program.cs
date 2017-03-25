@@ -1,5 +1,6 @@
 ﻿using System;
-using nVMF;
+using System.IO;
+using ValveFormats;
 
 namespace Narser.Two.Debug
 {
@@ -10,7 +11,8 @@ namespace Narser.Two.Debug
             const string path = "D:\\Programs\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\csgo\\scripts\\items\\";
             const string file = path + "items_game.txt";
 
-            var script = Script.Read(file);
+            var script = ValveSerialize.Deserialize(File.ReadAllText(file));
+
             Console.ReadLine();
         }
     }

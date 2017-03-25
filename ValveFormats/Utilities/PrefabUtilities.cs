@@ -1,8 +1,8 @@
 ﻿using System;
-using nVMF.Parser.Syntax.VMF.Nodes;
-using nVMF.Templates.CSGO;
+using ValveFormats.Parser.Syntax.VMF.Nodes;
+using ValveFormats.Templates.CSGO;
 
-namespace nVMF.Utilities
+namespace ValveFormats.Utilities
 {
     public static class PrefabUtilities
     {

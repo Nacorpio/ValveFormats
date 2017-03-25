@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace nVMF.Parser.Syntax.VMF.Nodes
+namespace ValveFormats.Parser.Syntax.VMF.Nodes
 {
     public class CompoundNode : DeclarationNode
     {

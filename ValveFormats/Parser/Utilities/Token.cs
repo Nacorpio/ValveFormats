@@ -1,4 +1,4 @@
-﻿namespace nVMF.Parser.Utilities
+﻿namespace ValveFormats.Parser.Utilities
 {
     public struct Token
     {
@@ -6,12 +6,14 @@
         /// Initializes a new instance of the <see cref="Token"/> structure.
         /// </summary>
         /// <param name="value">The value.</param>
-        /// <param name="location">The location.</param>
+        /// <param name="start">The start location.</param>
+        /// <param name="end">The end location.</param>
         /// <param name="kind">The kind.</param>
-        public Token(object value, TokenLocation location, TokenKind kind)
+        public Token(object value, TokenLocation start, TokenLocation end, TokenKind kind)
         {
             Value = value;
-            Location = location;
+            Start = start;
+            End = end;
             Kind = kind;
         }
 
@@ -21,9 +23,14 @@
         public object Value { get; }
 
         /// <summary>
-        /// Gets the location of the <see cref="Token"/>.
+        /// Gets the start location of the <see cref="Token"/>.
         /// </summary>
-        public TokenLocation Location { get; }
+        public TokenLocation Start { get; }
+
+        /// <summary>
+        /// Gets the end location of the <see cref="Token"/>.
+        /// </summary>
+        public TokenLocation End { get; }
 
         /// <summary>
         /// Gets the kind of the <see cref="Token"/>.
@@ -37,7 +44,7 @@
 
         public static bool operator ==(Token left, Token right)
         {
-            return left.Location.Equals(right.Location);
+            return left.End.Equals(right.End);
         }
 
         public static bool operator !=(Token left, Token right)
@@ -47,7 +54,7 @@
 
         public bool Equals(Token other)
         {
-            return Location.Equals(other.Location) && Kind == other.Kind;
+            return End.Equals(other.End) && Kind == other.Kind;
         }
 
         public override bool Equals(object obj)
@@ -60,7 +67,7 @@
         {
             unchecked
             {
-                return (Location.GetHashCode() * 397) ^ (int)Kind;
+                return (End.GetHashCode() * 397) ^ (int)Kind;
             }
         }
     }

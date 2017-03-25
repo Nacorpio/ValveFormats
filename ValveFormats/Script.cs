@@ -1,10 +1,8 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using nVMF.Parser.Syntax.VMF.Nodes;
-using VmfSyntaxParser = nVMF.Parser.Syntax.VMF.VmfSyntaxParser;
+﻿using System.Linq;
+using ValveFormats.Parser.Syntax.VMF;
+using ValveFormats.Parser.Syntax.VMF.Nodes;
 
-namespace nVMF
+namespace ValveFormats
 {
     public sealed class Script
     {
@@ -35,51 +33,11 @@ namespace nVMF
         /// </summary>
         internal void Parse(string source)
         {
-            using (var sp = new VmfSyntaxParser(source))
+            using (var sp = new ValveSyntaxParser(source))
             {
                 sp.Build();
                 Nodes = new DeclarationNodeList(sp.Nodes.Cast<DeclarationNode>());
             }
-        }
-
-        /// <summary>
-        /// Loads a <see cref="Script"/> from a specified source.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <returns></returns>
-        public static Script LoadString(string source)
-        {
-            return new Script(source);
-        }
-
-        /// <summary>
-        /// Writes a <see cref="Script"/> to a file at a specified path.
-        /// </summary>
-        /// <param name="path">The file path.</param>
-        /// <param name="script">The script to write.</param>
-        public static void Write(string path, Script script)
-        {
-            if (script == null)
-            {
-                throw new ArgumentNullException(nameof(script));
-            }
-
-            File.WriteAllText(path, script.Root.GetSource());
-        }
-
-        /// <summary>
-        /// Reads a <see cref="Script"/> from a file at a specified file path.
-        /// </summary>
-        /// <param name="path">The file path.</param>
-        /// <returns></returns>
-        public static Script Read(string path)
-        {
-            if (string.IsNullOrWhiteSpace(path))
-            {
-                throw new ArgumentNullException(nameof(path));
-            }
-
-            return LoadString(File.ReadAllText(path));
         }
     }
 }

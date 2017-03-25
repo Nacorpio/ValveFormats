@@ -1,14 +1,14 @@
-﻿using nVMF.Parser.Utilities;
+﻿using ValveFormats.Parser.Utilities;
 
-namespace nVMF.Parser.Syntax.VMF
+namespace ValveFormats.Parser.Syntax.VMF
 {
-    public sealed partial class VmfSyntaxParser : SyntaxParser
+    public sealed partial class ValveSyntaxParser : SyntaxParser
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="VmfSyntaxParser"/> class.
+        /// Initializes a new instance of the <see cref="ValveSyntaxParser"/> class.
         /// </summary>
         /// <param name="input">The string input.</param>
-        public VmfSyntaxParser(string input)
+        public ValveSyntaxParser(string input)
             : base(input)
         {
             Advanced += OnAdvanced;

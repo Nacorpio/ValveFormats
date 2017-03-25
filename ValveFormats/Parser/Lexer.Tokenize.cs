@@ -1,12 +1,13 @@
 ﻿using System.Text;
-using nVMF.Parser.Utilities;
+using ValveFormats.Parser.Utilities;
 
-namespace nVMF.Parser
+namespace ValveFormats.Parser
 {
     public partial class Lexer
     {
         protected virtual void OnAdvanced(Lexer sender, int current)
         {
+            var st = GetLocation();
             var sb = new StringBuilder();
 
             switch (current)
@@ -41,7 +42,7 @@ namespace nVMF.Parser
 
                 case '!':
                     {
-                        AddToken(TokenKind.ExclamationMark);
+                        AddToken(TokenKind.ExclamationMark, st, st);
                         break;
                     }
 
@@ -53,49 +54,49 @@ namespace nVMF.Parser
 
                 case '\'':
                     {
-                        AddToken(TokenKind.SingleQuote);
+                        AddToken(TokenKind.SingleQuote, st);
                         break;
                     }
 
                 case '@':
                     {
-                        AddToken(TokenKind.At);
+                        AddToken(TokenKind.At, st);
                         break;
                     }
 
                 case '#':
                     {
-                        AddToken(TokenKind.Hash);
+                        AddToken(TokenKind.Hash, st, st);
                         break;
                     }
 
                 case '$':
                     {
-                        AddToken(TokenKind.Dollar);
+                        AddToken(TokenKind.Dollar, st);
                         break;
                     }
 
                 case '¤':
                     {
-                        AddToken(TokenKind.CurrencySign);
+                        AddToken(TokenKind.CurrencySign, st);
                         break;
                     }
 
                 case '£':
                     {
-                        AddToken(TokenKind.Pound);
+                        AddToken(TokenKind.Pound, st);
                         break;
                     }
 
                 case '%':
                     {
-                        AddToken(TokenKind.Percent);
+                        AddToken(TokenKind.Percent, st);
                         break;
                     }
 
                 case '&':
                     {
-                        AddToken(TokenKind.Ampersand);
+                        AddToken(TokenKind.Ampersand, st);
                         break;
                     }
 
@@ -107,163 +108,163 @@ namespace nVMF.Parser
                             break;
                         }
 
-                        AddToken(TokenKind.ForwardSlash);
+                        AddToken(TokenKind.ForwardSlash, st);
                         break;
                     }
 
                 case '(':
                     {
-                        AddToken(TokenKind.RightParanthesis);
+                        AddToken(TokenKind.RightParanthesis, st);
                         break;
                     }
 
                 case ')':
                     {
-                        AddToken(TokenKind.LeftParanthesis);
+                        AddToken(TokenKind.LeftParanthesis, st);
                         break;
                     }
 
                 case '{':
                     {
-                        AddToken(TokenKind.RightCurlyBrace);
+                        AddToken(TokenKind.RightCurlyBrace, st);
                         break;
                     }
 
                 case '}':
                     {
-                        AddToken(TokenKind.LeftCurlyBrace);
+                        AddToken(TokenKind.LeftCurlyBrace, st);
                         break;
                     }
 
                 case '[':
                     {
-                        AddToken(TokenKind.RightSquareBrace);
+                        AddToken(TokenKind.RightSquareBrace, st);
                         break;
                     }
 
                 case ']':
                     {
-                        AddToken(TokenKind.LeftSquareBrace);
+                        AddToken(TokenKind.LeftSquareBrace, st);
                         break;
                     }
 
                 case '=':
                     {
-                        AddToken(TokenKind.Equals);
+                        AddToken(TokenKind.Equals, st);
                         break;
                     }
 
                 case '+':
                     {
-                        AddToken(TokenKind.Plus);
+                        AddToken(TokenKind.Plus, st);
                         break;
                     }
 
                 case '\\':
                     {
-                        AddToken(TokenKind.Backslash);
+                        AddToken(TokenKind.Backslash, st);
                         break;
                     }
 
                 case '?':
                     {
-                        AddToken(TokenKind.QuestionMark);
+                        AddToken(TokenKind.QuestionMark, st);
                         break;
                     }
 
                 case '`':
                     {
-                        AddToken(TokenKind.GraveAccent);
+                        AddToken(TokenKind.GraveAccent, st);
                         break;
                     }
 
                 case '´':
                     {
-                        AddToken(TokenKind.Diacritical);
+                        AddToken(TokenKind.Diacritical, st);
                         break;
                     }
 
                 case '^':
                     {
-                        AddToken(TokenKind.Caret);
+                        AddToken(TokenKind.Caret, st);
                         break;
                     }
 
                 case '~':
                     {
-                        AddToken(TokenKind.Tilde);
+                        AddToken(TokenKind.Tilde, st);
                         break;
                     }
 
                 case '*':
                     {
-                        AddToken(TokenKind.Asterisk);
+                        AddToken(TokenKind.Asterisk, st);
                         break;
                     }
 
                 case '-':
                     {
-                        AddToken(TokenKind.Hyphen);
+                        AddToken(TokenKind.Hyphen, st);
                         break;
                     }
 
                 case '_':
                     {
-                        AddToken(TokenKind.Underscore);
+                        AddToken(TokenKind.Underscore, st);
                         break;
                     }
 
                 case ':':
                     {
-                        AddToken(TokenKind.Colon);
+                        AddToken(TokenKind.Colon, st);
                         break;
                     }
 
                 case ';':
                     {
-                        AddToken(TokenKind.Semicolon);
+                        AddToken(TokenKind.Semicolon, st);
                         break;
                     }
 
                 case '.':
                     {
-                        AddToken(TokenKind.Dot);
+                        AddToken(TokenKind.Dot, st);
                         break;
                     }
 
                 case ',':
                     {
-                        AddToken(TokenKind.Comma);
+                        AddToken(TokenKind.Comma, st);
                         break;
                     }
 
                 case '|':
                     {
-                        AddToken(TokenKind.Pipe);
+                        AddToken(TokenKind.Pipe, st);
                         break;
                     }
 
                 case '<':
                     {
-                        AddToken(TokenKind.LeftArrow);
+                        AddToken(TokenKind.LeftArrow, st);
                         break;
                     }
 
                 case '>':
                     {
-                        AddToken(TokenKind.RightArrow);
+                        AddToken(TokenKind.RightArrow, st);
                         break;
                     }
 
                 case '§':
                     {
-                        AddToken(TokenKind.Section);
+                        AddToken(TokenKind.Section, st);
                         break;
                     }
 
                 case '½':
                     {
-                        AddToken(TokenKind.OneHalf);
+                        AddToken(TokenKind.OneHalf, st);
                         break;
                     }
 
@@ -271,6 +272,7 @@ namespace nVMF.Parser
                     {
                         if (char.IsLetter((char) current))
                         {
+                            var start = GetLocation();
                             sb.Append((char) current);
 
                             while (char.IsLetterOrDigit(Peek()) || Peek() == '_')
@@ -279,7 +281,7 @@ namespace nVMF.Parser
                                 sb.Append(Current);
                             }
 
-                            AddToken(TokenKind.Identifier, sb.ToString());
+                            AddToken(TokenKind.Identifier, start, sb.ToString());
                             sb.Length = 0;
 
                             break;
@@ -287,6 +289,7 @@ namespace nVMF.Parser
 
                         if (char.IsDigit((char) current))
                         {
+                            var start = GetLocation();
                             sb.Append((char) current);
 
                             while (char.IsDigit(Peek()) || Peek() == '.')
@@ -295,7 +298,7 @@ namespace nVMF.Parser
                                 sb.Append(Current);
                             }
 
-                            AddToken(TokenKind.Numerical, sb.ToString());
+                            AddToken(TokenKind.Numerical, start, sb.ToString());
                             sb.Length = 0;
 
                             break;
@@ -306,13 +309,14 @@ namespace nVMF.Parser
             }
         }
 
-        private void AddToken(TokenKind kind, object value = null)
+        private void AddToken(TokenKind kind, TokenLocation start, object value = null)
         {
-            _tokens.Add(new Token(value ?? Current, GetLocation(), kind));
+            _tokens.Add(new Token(value ?? Current, start, GetLocation(), kind));
         }
 
         private void HandleStringLiteral()
         {
+            var start = GetLocation();
             var sb = new StringBuilder(Current);
 
             // Advance until it hits a trailing double quote.
@@ -324,8 +328,7 @@ namespace nVMF.Parser
 
             // Advance past the trailing double quote.
             Advance(false);
-
-            AddToken(TokenKind.StringLiteral, sb.ToString());
+            AddToken(TokenKind.StringLiteral, start, sb.ToString());
         }
 
         private void HandleSingleLineComment()

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using nVMF.Parser.Syntax.VMF.Nodes;
+using ValveFormats.Parser.Syntax.VMF.Nodes;
 
-namespace nVMF.Extensions
+namespace ValveFormats.Extensions
 {
     public static class CompoundExtensions
     {

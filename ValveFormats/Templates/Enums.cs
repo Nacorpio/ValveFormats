@@ -1,4 +1,4 @@
-namespace nVMF.Templates
+namespace ValveFormats.Templates
 {
     public enum CsgoTeam
     {

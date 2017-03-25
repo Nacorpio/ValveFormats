@@ -1,4 +1,4 @@
-﻿namespace nVMF.Parser
+﻿namespace ValveFormats.Parser
 {
     public interface ISource
     {

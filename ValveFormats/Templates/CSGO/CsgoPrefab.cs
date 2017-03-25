@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using nVMF.Extensions;
-using nVMF.Parser.Syntax.VMF.Nodes;
-using nVMF.Utilities;
+using ValveFormats.Extensions;
+using ValveFormats.Parser.Syntax.VMF.Nodes;
+using ValveFormats.Utilities;
 
-namespace nVMF.Templates.CSGO
+namespace ValveFormats.Templates.CSGO
 {
     public class CsgoPrefab
     {

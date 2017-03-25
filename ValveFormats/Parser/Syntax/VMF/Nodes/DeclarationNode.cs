@@ -1,4 +1,4 @@
-namespace nVMF.Parser.Syntax.VMF.Nodes
+namespace ValveFormats.Parser.Syntax.VMF.Nodes
 {
     public abstract class DeclarationNode : SyntaxNode, ISource
     {

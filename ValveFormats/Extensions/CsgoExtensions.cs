@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using nVMF.Parser.Syntax.VMF.Nodes;
-using nVMF.Templates;
-using nVMF.Templates.CSGO;
+using ValveFormats.Parser.Syntax.VMF.Nodes;
+using ValveFormats.Templates;
+using ValveFormats.Templates.CSGO;
 
-namespace nVMF.Extensions
+namespace ValveFormats.Extensions
 {
     public static class CsgoExtensions
     {

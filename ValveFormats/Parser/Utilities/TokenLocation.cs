@@ -1,7 +1,7 @@
-﻿namespace nVMF.Parser.Utilities
+﻿namespace ValveFormats.Parser.Utilities
 {
     /// <summary>
-    /// Represents the location of a <see cref="Token"/> object.
+    /// Represents the location of a token.
     /// </summary>
     public struct TokenLocation
     {
@@ -21,17 +21,17 @@
         /// <summary>
         /// Gets or sets the position of the <see cref="TokenLocation"/>.
         /// </summary>
-        public int Position { get; set; }
+        public int Position { get; }
 
         /// <summary>
         /// Gets or sets the column of the <see cref="TokenLocation"/>.
         /// </summary>
-        public int Column { get; set; }
+        public int Column { get; }
 
         /// <summary>
         /// Gets or sets the line number of the <see cref="TokenLocation"/>.
         /// </summary>
-        public int Line { get; set; }
+        public int Line { get; }
 
         public static bool operator ==(TokenLocation left, TokenLocation right)
         {

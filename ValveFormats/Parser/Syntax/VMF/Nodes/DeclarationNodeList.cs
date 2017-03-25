@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace nVMF.Parser.Syntax.VMF.Nodes
+namespace ValveFormats.Parser.Syntax.VMF.Nodes
 {
     public sealed class DeclarationNodeList : List<DeclarationNode>
     {

@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using nVMF.Extensions;
-using nVMF.Parser.Syntax.VMF.Nodes;
+using ValveFormats.Extensions;
+using ValveFormats.Parser.Syntax.VMF.Nodes;
 
-namespace nVMF.Templates.CSGO
+namespace ValveFormats.Templates.CSGO
 {
     public class CsgoWeaponPrefab : CsgoInventoryItemPrefab, IGameObject
     {

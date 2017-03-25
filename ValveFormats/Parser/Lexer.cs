@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using nVMF.Parser.Utilities;
+using ValveFormats.Parser.Utilities;
 
-namespace nVMF.Parser
+namespace ValveFormats.Parser
 {
     public delegate void LexerEventHandler(Lexer sender, EventArgs eventArgs);
 

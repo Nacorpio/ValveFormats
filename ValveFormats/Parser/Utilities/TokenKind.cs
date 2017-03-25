@@ -1,4 +1,4 @@
-﻿namespace nVMF.Parser.Utilities
+﻿namespace ValveFormats.Parser.Utilities
 {
     public enum TokenKind
     {

@@ -1,8 +1,8 @@
 using System;
-using nVMF.Extensions;
-using nVMF.Parser.Syntax.VMF.Nodes;
+using ValveFormats.Extensions;
+using ValveFormats.Parser.Syntax.VMF.Nodes;
 
-namespace nVMF.Templates.CSGO
+namespace ValveFormats.Templates.CSGO
 {
     public class CsgoCollectiblePrefab : CsgoInventoryItemPrefab
     {

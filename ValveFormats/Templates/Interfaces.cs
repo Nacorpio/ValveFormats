@@ -1,6 +1,6 @@
-using nVMF.Templates.CSGO;
+using ValveFormats.Templates.CSGO;
 
-namespace nVMF.Templates
+namespace ValveFormats.Templates
 {
     public interface IInventoryItem
     {
